@@ -1,0 +1,20 @@
+# 1. Variables de entorno (SEGURIDAD CRÍTICA)
+.env
+
+# 2. Entornos virtuales y caché de Python
+venv/
+env/
+__pycache__/
+*.pyc
+
+# 3. Base de datos local
+db.sqlite3
+
+# 4. Frontend y dependencias
+node_modules/
+dist/
+npm-debug.log
+
+# 5. Archivos de sistema y editores (VS Code)
+.vscode/
+.DS_Store

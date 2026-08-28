@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* --- PERSONALIZACIÓN DEL SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 8px; /* Más delgada y elegante */
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19; /* El mismo azul muy oscuro de tu fondo */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3); /* Verde esmeralda semitransparente */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.8); /* Se ilumina cuando pasas el mouse */
+}
