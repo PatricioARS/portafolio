@@ -14,9 +14,9 @@ inflection==0.5.1
 lxml==6.1.2
 multitasking==0.0.13
 mysqlclient==2.2.8
-numpy==2.5.2
+numpy
 packaging==26.3
-pandas==3.0.5
+pandas
 peewee==4.4.0
 pillow==12.3.0
 platformdirs==4.11.3
