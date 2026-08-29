@@ -11,7 +11,7 @@ const filtroActual = ref('Todos');
 
 const cargarCategorias = async () => {
   try {
-    const respuesta = await fetch('http://127.0.0.1:8000/api/v1/portafolio/categorias/');
+    const respuesta = await fetch('/api/v1/portafolio/categorias/');
     const datos = await respuesta.json();
     categorias.value = [{ id: 0, name: 'Todos' }, ...datos];
   } catch (error) {
@@ -21,7 +21,7 @@ const cargarCategorias = async () => {
 
 const cargarProyectos = async () => {
   try {
-    const respuesta = await fetch('http://127.0.0.1:8000/api/v1/portafolio/proyectos/');
+    const respuesta = await fetch('/api/v1/portafolio/proyectos/');
     const datos = await respuesta.json();
     misProyectos.value = datos;
 
@@ -114,7 +114,7 @@ const chartOption = ref({
 
 const cargarPerfil = async () => {
   try {
-    const respuesta = await fetch('http://127.0.0.1:8000/api/v1/profiles/usuarios/');
+    const respuesta = await fetch('/api/v1/profiles/usuarios/');
     const datos = await respuesta.json();
     if (datos.length > 0) miPerfil.value = datos[0];
   } catch (error) { console.error("Error al conectar el perfil:", error); }
@@ -122,7 +122,7 @@ const cargarPerfil = async () => {
 
 const cargarDatosFinancieros = async () => {
   try {
-    const respuesta = await fetch('http://127.0.0.1:8000/api/v1/analytics/api/finanzas/');
+    const respuesta = await fetch('/api/v1/analytics/api/finanzas/');
     const datosReales = await respuesta.json();
     chartOption.value.xAxis.data = datosReales.fechas;
     chartOption.value.series[0].data = datosReales.valores;
@@ -132,7 +132,7 @@ const cargarDatosFinancieros = async () => {
 const datosOportunidad = ref(null);
 const cargarOportunidades = async () => {
   try {
-    const respuesta = await fetch('http://127.0.0.1:8000/api/v1/analytics/api/oportunidad-etf/');
+    const respuesta = await fetch('/api/v1/analytics/api/oportunidad-etf/');
     const datos = await respuesta.json();
     datosOportunidad.value = datos;
   } catch (error) { console.error("Error al cargar las oportunidades de ETFs:", error); }

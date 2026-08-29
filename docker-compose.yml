@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: portafolio-backend
+    restart: always
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    # Si usas MySQL en un contenedor, lo conectaremos aquí después. 
+    # Por ahora, aseguramos que el backend levante.
+
+  frontend:
+    build: ./frontend
+    container_name: portafolio-frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend

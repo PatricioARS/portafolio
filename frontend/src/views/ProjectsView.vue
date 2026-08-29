@@ -75,7 +75,7 @@ const filtroActual = ref('Todos');
 
 const cargarCategorias = async () => {
   try {
-    const respuesta = await fetch('http://127.0.0.1:8000/api/v1/portafolio/categorias/');
+    const respuesta = await fetch('/api/v1/portafolio/categorias/');
     const datos = await respuesta.json();
     categorias.value = [{ id: 0, name: 'Todos' }, ...datos];
   } catch (error) { console.error("Error al cargar categorías:", error); }
@@ -83,7 +83,7 @@ const cargarCategorias = async () => {
 
 const cargarProyectos = async () => {
   try {
-    const respuesta = await fetch('http://127.0.0.1:8000/api/v1/portafolio/proyectos/');
+    const respuesta = await fetch('/api/v1/portafolio/proyectos/');
     const datos = await respuesta.json();
     misProyectos.value = datos;
   } catch (error) { console.error("Error al cargar los proyectos:", error); }
