@@ -3,9 +3,8 @@ services:
     image: mysql:8.0
     container_name: portafolio-db
     restart: always
-    environment:
-      MYSQL_DATABASE: portfolio_db
-      MYSQL_ROOT_PASSWORD: 123456
+    env_file:
+      - .env
     volumes:
       - db_data:/var/lib/mysql
 
