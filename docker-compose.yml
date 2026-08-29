@@ -1,6 +1,14 @@
-version: '3.8'
-
 services:
+  db:
+    image: mysql:8.0
+    container_name: portafolio-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: portfolio_db
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - db_data:/var/lib/mysql
+
   backend:
     build: .
     container_name: portafolio-backend
@@ -9,6 +17,8 @@ services:
       - .:/app
     ports:
       - "8000:8000"
+    depends_on:
+      - db
 
   frontend:
     build: ./frontend
@@ -18,3 +28,6 @@ services:
       - "80:80"
     depends_on:
       - backend
+
+volumes:
+  db_data:
