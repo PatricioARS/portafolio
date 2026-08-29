@@ -3,12 +3,14 @@ services:
     image: mysql:8.0
     container_name: portafolio-db
     restart: always
+    env_file:
+      - .env
     environment:
-      MYSQL_DATABASE: portfolio_db
-      MYSQL_ROOT_PASSWORD: 123456
       MYSQL_ROOT_HOST: "%"
     volumes:
       - db_data:/var/lib/mysql
+    networks:
+      - red_portafolio
 
   backend:
     build: .
@@ -20,6 +22,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    networks:
+      - red_portafolio
 
   frontend:
     build: ./frontend
@@ -29,6 +33,12 @@ services:
       - "80:80"
     depends_on:
       - backend
+    networks:
+      - red_portafolio
+
+networks:
+  red_portafolio:
+    driver: bridge
 
 volumes:
   db_data:
