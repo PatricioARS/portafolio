@@ -5,8 +5,8 @@ cffi==2.1.1
 charset-normalizer==3.5.1
 curl_cffi==0.16.1
 Django==5.0.3
-django-cors-headers==4.9.0
-djangorestframework==3.18.0
+django-cors-headers==4.2
+djangorestframework==5.2
 djangorestframework_simplejwt==5.5.1
 drf-yasg==1.21.15
 idna==3.19
