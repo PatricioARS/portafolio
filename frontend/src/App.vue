@@ -115,7 +115,7 @@ def obtener_datos_financieros(request):
         <router-link @click="menuAbierto = false" to="/" class="text-3xl font-bold text-white hover:text-emerald-400 transition-colors">Inicio</router-link>
         
         <!-- AQUÍ TAMBIÉN ESTÁ EL CAMBIO PARA MÓVILES -->
-        <router-link @click="menuAbierto = false" to="/data-analysis" class="text-3xl font-bold text-emerald-400 hover:text-emerald-300 transition-colors mt-4">Proyectos</router-link>
+        <router-link @click="menuAbierto = false" to="/proyectos" class="text-3xl font-bold text-emerald-400 hover:text-emerald-300 transition-colors mt-4">Proyectos</router-link>
         <router-link @click="menuAbierto = false" to="/data-analysis" class="text-3xl font-bold text-emerald-400 hover:text-emerald-300 transition-colors mt-4">Lab de Datos</router-link>
 
         <a @click="menuAbierto = false" to="/data-analysis" class="text-3xl font-bold text-emerald-400 hover:text-emerald-300 transition-colors mt-4">Sobre Mí</a>
