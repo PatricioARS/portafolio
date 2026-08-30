@@ -23,6 +23,17 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      // Si la ruta tiene un #, hace un scroll suave hasta esa sección
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+    // Si no hay #, simplemente sube al inicio de la página
+    return { top: 0 }
+  }
 });
 
 export default router;
