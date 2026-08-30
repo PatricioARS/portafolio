@@ -234,6 +234,7 @@ onUnmounted(() => {
         <span class="text-emerald-400 font-bold text-sm">Vue 3</span>
       </div>
       <div class="absolute bottom-60 md:bottom-40 right-[15%] md:right-1/4 animate-levitate-fast bg-white/5 backdrop-blur-md border border-blue-500/30 px-4 py-2 rounded-2xl flex items-center gap-2 shadow-[0_0_15px_rgba(59,130,246,0.2)] reveal delay-500">
+        <span class="text-yellow-400 font-mono text-xs">Django</span>
       </div>
       <div class="absolute top-40 right-[10%] md:right-1/3 animate-[levitate_6s_ease-in-out_infinite] opacity-40 bg-black/40 border border-white/5 px-3 py-1 rounded-xl flex items-center gap-2 scale-110 reveal delay-700">
         <span class="text-yellow-400 font-mono text-xs">Python</span>
