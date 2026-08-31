@@ -18,6 +18,7 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
+      - static_volume:/app/staticfiles
     ports:
       - "8000:8000"
     depends_on:
@@ -33,6 +34,8 @@ services:
       - "80:80"
     depends_on:
       - backend
+    volumes:
+      - static_volume:/app/staticfiles
 
 volumes:
   db_data_local:
